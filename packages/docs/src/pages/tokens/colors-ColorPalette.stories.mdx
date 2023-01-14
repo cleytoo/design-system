@@ -1,0 +1,15 @@
+import { Meta, ColorPalette, ColorItem } from '@storybook/addon-docs'
+import{ ColorsGrid } from '../../components/ColorsGrid'
+import { colors } from '@ignite-ui/tokens'
+
+<Meta title="Tokens/Colors-ColorPalette" />
+
+# Colors ColorPalette SB
+
+Essas são as cores utilizadas no Ignite UI utilizando o addon ColorPalette do sb.
+
+<ColorPalette>
+  { Object.entries(colors).map(([key, color]) => {
+    return <ColorItem key={key} title={`$${key}`} colors={{ '': color }} />
+  })}
+</ColorPalette>
